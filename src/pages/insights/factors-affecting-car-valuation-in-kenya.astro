@@ -1,0 +1,75 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const factors = [
+  "Age of the vehicle",
+  "Mileage or odometer reading",
+  "Make, model, and brand popularity",
+  "Mechanical and structural condition",
+  "Service history and maintenance records",
+  "Body condition and appearance",
+  "Accident and repair history",
+  "Vehicle usage: private or commercial",
+  "Imported versus locally assembled status",
+  "Spare-parts availability and maintenance cost",
+  "Modifications and customisation quality",
+  "Current market demand and seasonality"
+];
+---
+
+<MainLayout
+  title="Factors Affecting Car Valuation in Kenya | Unitech Accident Assessor"
+  description="Discover the key factors that affect a vehicle's market value in Kenya, from age and mileage to condition and demand."
+  pageTitle="Factors Affecting Car Valuation in Kenya"
+>
+  <main class="page-main">
+    <section class="content-section">
+      <div class="content-grid">
+        <article class="article-card">
+          <p class="article-lead">
+            A car’s value in Kenya is shaped by more than make and model. Condition, usage,
+            maintenance, accident history, and market demand all influence the final figure.
+          </p>
+
+          <h2>Key valuation factors</h2>
+          <div class="factor-grid">
+            {factors.map((factor) => <div class="mini-card">{factor}</div>)}
+          </div>
+
+          <h2>What valuers look for most closely</h2>
+          <p>
+            The biggest drivers of value tend to be age, mileage, mechanical condition, and
+            whether there is evidence of accident damage or poor repairs. These can affect both
+            resale value and what an insurer is willing to recognize.
+          </p>
+
+          <h2>Why market demand matters</h2>
+          <p>
+            Popular brands with reliable spare-parts support, such as many Toyota, Subaru, and
+            Mazda models, often retain value better in Kenya. High fuel prices, rural demand for
+            SUVs, and broader economic conditions can also shift pricing.
+          </p>
+
+          <h2>Why documentation supports value</h2>
+          <p>
+            A strong service history, consistent ownership details, and clear repair records help a
+            valuer defend the figure given in the report. Missing or inconsistent records can lower
+            buyer and insurer confidence.
+          </p>
+        </article>
+
+        <aside class="sidebar-card">
+          <p class="eyebrow">Quick takeaway</p>
+          <h2>Condition and proof matter.</h2>
+          <p>
+            Two vehicles of the same model year can have very different values depending on
+            maintenance, accident history, and usage.
+          </p>
+          <a class="button button--primary" href="/services/pre-purchase-vehicle-valuation/">
+            Book a pre-purchase check
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+</MainLayout>

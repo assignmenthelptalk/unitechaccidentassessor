@@ -1,0 +1,191 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const services = [
+  {
+    title: "Motor Vehicle Valuation",
+    description:
+      "Independent valuation reports for private, commercial, PSV, and fleet vehicles across Kenya.",
+    href: "/insights/how-vehicle-valuation-is-done-in-kenya/"
+  },
+  {
+    title: "Accident Damage Assessment",
+    description:
+      "Clear, evidence-based accident assessment reports that support insurers, repair decisions, and claims handling.",
+    href: "/insights/market-value-vs-replacement-cost/"
+  },
+  {
+    title: "Pre-Insurance Inspection",
+    description:
+      "Vehicle condition checks before policy issuance, renewal, sale, or financing.",
+    href: "/services/pre-purchase-vehicle-valuation/"
+  },
+  {
+    title: "Loss Adjusting Support",
+    description:
+      "Professional documentation and advisory support for disputed, complex, or high-value claims.",
+    href: "/insights/factors-affecting-car-valuation-in-kenya/"
+  }
+];
+
+const highlights = [
+  "Kenya-focused valuation workflows",
+  "Reports suitable for insurers, financiers, and private clients",
+  "Fast turnaround for urgent accident assessments",
+  "On-site inspections in Nairobi and surrounding regions"
+];
+
+const process = [
+  {
+    step: "1. Request an assessment",
+    text: "Share the vehicle details, location, and type of valuation or inspection you need."
+  },
+  {
+    step: "2. Inspection and documentation",
+    text: "We inspect the vehicle, capture evidence, and review all relevant details."
+  },
+  {
+    step: "3. Professional report delivery",
+    text: "You receive a structured valuation or accident assessment report ready for use."
+  }
+];
+
+const insightLinks = [
+  {
+    title: "How vehicle valuation is done in Kenya",
+    href: "/insights/how-vehicle-valuation-is-done-in-kenya/"
+  },
+  {
+    title: "Factors affecting car valuation in Kenya",
+    href: "/insights/factors-affecting-car-valuation-in-kenya/"
+  },
+  {
+    title: "Market value vs. replacement cost",
+    href: "/insights/market-value-vs-replacement-cost/"
+  }
+];
+---
+
+<MainLayout
+  title="Unitech Accident Assessor | Valuation Services in Kenya"
+  description="Unitech Accident Assessor provides professional vehicle valuation, accident assessment, and inspection services in Kenya."
+>
+  <main>
+    <section class="hero">
+      <div class="hero__backdrop"></div>
+      <div class="hero__content">
+        <div class="hero__copy">
+          <p class="eyebrow">Independent valuation services</p>
+          <h1>Trusted vehicle valuations and accident assessments for the Kenyan market.</h1>
+          <p class="hero__lede">
+            We help insurers, businesses, and private vehicle owners make confident decisions
+            with practical inspection reports, damage assessments, and market-based valuations.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#services">Explore services</a>
+            <a class="button button--ghost" href="#contact">Speak to us</a>
+          </div>
+        </div>
+
+        <aside class="hero__panel">
+          <p class="hero__panel-label">What we handle</p>
+          <ul>
+            {highlights.map((item) => <li>{item}</li>)}
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--light" id="services">
+      <div class="section__intro">
+        <p class="eyebrow">Our services</p>
+        <h2>Valuation support built for real claims, real inspections, and real decisions.</h2>
+      </div>
+
+      <div class="service-grid">
+        {services.map((service) => (
+          <article class="card">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <a class="card__link" href={service.href}>Learn more</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Why choose us</p>
+          <h2>Professional reports with local market understanding.</h2>
+        </div>
+        <div class="checklist">
+          <p>
+            The site is positioned for clients who need dependable, well-presented valuation work
+            in Kenya, whether for insurance, financing, resale, or accident-related review.
+          </p>
+          <p>
+            It gives you a strong foundation to add online quotation forms, county coverage pages,
+            and SEO content later.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="section__intro">
+        <p class="eyebrow">How it works</p>
+        <h2>A simple process that keeps clients informed.</h2>
+      </div>
+
+      <div class="process-grid">
+        {process.map((item) => (
+          <article class="process-card">
+            <p class="process-card__step">{item.step}</p>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="section__intro">
+        <p class="eyebrow">Knowledge centre</p>
+        <h2>Helpful guides for buyers, insurers, and vehicle owners in Kenya.</h2>
+      </div>
+
+      <div class="insight-list">
+        {insightLinks.map((item) => (
+          <a class="insight-list__item" href={item.href}>
+            <span>{item.title}</span>
+            <span>View page</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section--accent" id="contact">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Ready to launch UnitechAccidentAssessor.co.ke</h2>
+          <p>
+            This starter includes a clean homepage. We can next add your real phone number,
+            email, office location, service areas, and an enquiry form.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <a href="tel:+254755668653">+254 755 668 653</a>
+          <a href="https://wa.me/254755668653" target="_blank" rel="noreferrer">
+            WhatsApp Chat
+          </a>
+          <a href="mailto:info@unitechaccidentassessor.co.ke">
+            info@unitechaccidentassessor.co.ke
+          </a>
+          <p>Nairobi, Kenya</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>
