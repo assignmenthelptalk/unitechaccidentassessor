@@ -1,0 +1,45 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const articles = [
+  {
+    title: "How Vehicle Valuation Is Done in Kenya",
+    href: "/insights/how-vehicle-valuation-is-done-in-kenya/",
+    summary:
+      "A practical guide to the vehicle valuation process in Kenya, from inspection and documentation review to depreciation and final reporting."
+  },
+  {
+    title: "Factors Affecting Car Valuation in Kenya",
+    href: "/insights/factors-affecting-car-valuation-in-kenya/",
+    summary:
+      "A full breakdown of the biggest factors that shape a car's market value, including age, mileage, condition, service history, and market demand."
+  },
+  {
+    title: "Market Value vs Replacement Cost",
+    href: "/insights/market-value-vs-replacement-cost/",
+    summary:
+      "A clear explanation of how these two valuation concepts differ and when each one matters in Kenyan insurance and ownership decisions."
+  }
+];
+---
+
+<MainLayout
+  title="Insights | Unitech Accident Assessor"
+  description="Read Unitech Accident Assessor articles on vehicle valuation, pricing factors, and insurance valuation concepts in Kenya."
+  pageTitle="Insights and Valuation Articles"
+>
+  <main class="page-main">
+    <section class="content-section">
+      <div class="article-stack">
+        {articles.map((article) => (
+          <article class="article-preview">
+            <p class="eyebrow">Published article</p>
+            <h2>{article.title}</h2>
+            <p>{article.summary}</p>
+            <a class="button button--primary" href={article.href}>Read article</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</MainLayout>

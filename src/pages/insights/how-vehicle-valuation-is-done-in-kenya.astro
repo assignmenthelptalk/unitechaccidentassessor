@@ -1,10 +1,71 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const useCases = [
+  "Before buying or selling a car",
+  "When insuring a vehicle",
+  "After an accident for claim compensation",
+  "For customs clearance and import duty",
+  "In court matters such as succession or divorce cases",
+  "To assess depreciation or fleet value"
+];
+
+const process = [
+  {
+    title: "1. Vehicle inspection",
+    points: [
+      "Overall body condition, paintwork, dents, scratches, and rust",
+      "Tyre wear, alignment, lights, brakes, wipers, and other roadworthiness features",
+      "Interior condition, dashboard condition, seats, and odometer reading",
+      "Mechanical state including engine performance, suspension, and transmission",
+      "Verification of chassis number and engine number"
+    ]
+  },
+  {
+    title: "2. Documentation review",
+    points: [
+      "Logbook details, registration, and ownership records",
+      "Service and maintenance history",
+      "Import records for foreign-used vehicles",
+      "Accident history where available",
+      "Previous valuation or assessment reports"
+    ]
+  },
+  {
+    title: "3. Market analysis",
+    points: [
+      "Current market prices for similar vehicles in Kenya",
+      "Year of manufacture, age, and depreciation profile",
+      "Mileage and general condition compared with similar units",
+      "Demand trends for the model in the local market",
+      "Availability of spare parts and any common model-specific issues"
+    ]
+  },
+  {
+    title: "4. Depreciation calculation",
+    points: [
+      "Vehicles commonly lose about 15% to 20% in the first year",
+      "Later annual depreciation often falls around 10% to 15%, depending on condition",
+      "Additional deductions can apply for accident damage, poor maintenance, or risky modifications",
+      "Well-maintained vehicles with service records usually retain stronger value"
+    ]
+  },
+  {
+    title: "5. Final report preparation",
+    points: [
+      "Vehicle description and inspection photos",
+      "Assessed current market value",
+      "Pre-accident value where needed",
+      "Depreciation analysis and comments on roadworthiness",
+      "Official stamp and signature from the certified valuer"
+    ]
+  }
+];
 ---
 
 <MainLayout
   title="How Vehicle Valuation Is Done in Kenya | Unitech Accident Assessor"
-  description="Learn how vehicle valuation is done in Kenya, including inspection, documentation review, depreciation, and final reporting."
+  description="Learn how vehicle valuation is done in Kenya, from inspection and documentation review to market analysis, depreciation, and final reporting."
   pageTitle="How Vehicle Valuation Is Done in Kenya"
 >
   <main class="page-main">
@@ -12,75 +73,62 @@ import MainLayout from "../../layouts/MainLayout.astro";
       <div class="content-grid">
         <article class="article-card">
           <p class="article-lead">
-            Vehicle valuation in Kenya combines physical inspection, document verification, and
-            market analysis to arrive at a fair and defensible value.
+            Whether you are buying, selling, insuring, or importing a car, knowing its true market
+            value is essential. In Kenya, vehicle valuation is a structured process that combines
+            inspection, records review, depreciation analysis, and current market evidence.
           </p>
 
-          <h2>Who performs vehicle valuations?</h2>
+          <h2>Who performs vehicle valuations in Kenya?</h2>
           <p>
-            Valuations are typically carried out by licensed motor vehicle valuers, certified
-            assessors, and registered valuation firms. Their reports are commonly relied on by
-            insurers, banks, legal teams, and public agencies.
+            Vehicle valuations are typically carried out by licensed motor vehicle valuers,
+            certified vehicle assessors, and registered valuation companies such as Unitech. Their
+            reports are often relied on by banks, insurers, customs authorities, legal teams, and
+            private vehicle owners.
+          </p>
+          <p>
+            In practice, these reports are especially important because they help create a fair and
+            defensible basis for underwriting, financing, resale decisions, and dispute resolution.
           </p>
 
           <h2>When do you need a valuation?</h2>
           <ul class="content-list">
-            <li>Before buying or selling a vehicle</li>
-            <li>When arranging or renewing insurance</li>
-            <li>After an accident for claim support</li>
-            <li>For customs, financing, or court-related matters</li>
-            <li>When reviewing fleet depreciation or asset values</li>
+            {useCases.map((item) => <li>{item}</li>)}
           </ul>
 
-          <h2>The valuation process</h2>
+          <h2>The valuation process step by step</h2>
           <div class="article-steps">
-            <div>
-              <h3>1. Physical inspection</h3>
-              <p>
-                The valuer checks the bodywork, tyres, interior, mechanical condition,
-                roadworthiness items, and identification details such as chassis and engine
-                numbers.
-              </p>
-            </div>
-            <div>
-              <h3>2. Documentation review</h3>
-              <p>
-                Logbook details, service history, accident records, import records, and any
-                previous reports are reviewed to support an accurate conclusion.
-              </p>
-            </div>
-            <div>
-              <h3>3. Market comparison</h3>
-              <p>
-                Current asking and selling trends for similar vehicles in Kenya are compared,
-                alongside model demand, age, mileage, and spare-parts considerations.
-              </p>
-            </div>
-            <div>
-              <h3>4. Depreciation analysis</h3>
-              <p>
-                Depreciation is considered based on age, condition, mileage, repairs, and use.
-                Well-maintained vehicles with service records usually retain stronger value.
-              </p>
-            </div>
-            <div>
-              <h3>5. Final report</h3>
-              <p>
-                A complete report is prepared with vehicle details, photographs, assessed value,
-                observations, and the valuer’s professional endorsement.
-              </p>
-            </div>
+            {process.map((step) => (
+              <section class="step-card">
+                <h3>{step.title}</h3>
+                <ul class="content-list">
+                  {step.points.map((point) => <li>{point}</li>)}
+                </ul>
+              </section>
+            ))}
           </div>
+
+          <h2>How much does valuation cost in Kenya?</h2>
+          <p>
+            For many private vehicles, valuation fees commonly fall between KES 3,000 and
+            KES 10,000. Commercial vehicles, imported units, or more detailed assignments may cost
+            more because they require additional inspection time and market work.
+          </p>
+
+          <h2>Why this process matters</h2>
+          <p>
+            A certified valuation protects you from underinsurance, poor buying decisions, and weak
+            negotiation positions. It also gives insurers, courts, and financiers a professional
+            document they can rely on when determining compensation or asset value.
+          </p>
         </article>
 
         <aside class="sidebar-card">
-          <p class="eyebrow">Typical fees</p>
-          <h2>KES 3,000 to KES 10,000</h2>
+          <p class="eyebrow">At a glance</p>
+          <h2>Inspection, market evidence, and a signed report.</h2>
           <p>
-            Private car valuation fees in Kenya often fall in this range, while commercial,
-            imported, or more detailed assessment work may cost more.
+            A proper Kenya vehicle valuation is not guesswork. It is a documented process built on
+            the condition of the car and what similar vehicles are actually worth in the market.
           </p>
-
           <p class="eyebrow">Need help?</p>
           <a class="button button--primary" href="https://wa.me/254755668653" target="_blank" rel="noreferrer">
             WhatsApp Unitech

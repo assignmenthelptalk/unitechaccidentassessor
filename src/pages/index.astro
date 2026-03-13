@@ -53,15 +53,21 @@ const process = [
 const insightLinks = [
   {
     title: "How vehicle valuation is done in Kenya",
-    href: "/insights/how-vehicle-valuation-is-done-in-kenya/"
+    href: "/insights/how-vehicle-valuation-is-done-in-kenya/",
+    excerpt:
+      "Learn the actual valuation process used in Kenya, including inspection, documentation checks, depreciation, and reporting."
   },
   {
     title: "Factors affecting car valuation in Kenya",
-    href: "/insights/factors-affecting-car-valuation-in-kenya/"
+    href: "/insights/factors-affecting-car-valuation-in-kenya/",
+    excerpt:
+      "See the main factors that influence value, from mileage and service history to market demand and accident records."
   },
   {
     title: "Market value vs. replacement cost",
-    href: "/insights/market-value-vs-replacement-cost/"
+    href: "/insights/market-value-vs-replacement-cost/",
+    excerpt:
+      "Understand which value type matters for insurance, claims, resale, and asset planning."
   }
 ];
 ---
@@ -157,8 +163,11 @@ const insightLinks = [
       <div class="insight-list">
         {insightLinks.map((item) => (
           <a class="insight-list__item" href={item.href}>
-            <span>{item.title}</span>
-            <span>View page</span>
+            <div>
+              <strong>{item.title}</strong>
+              <p>{item.excerpt}</p>
+            </div>
+            <span>Read article</span>
           </a>
         ))}
       </div>
@@ -168,10 +177,10 @@ const insightLinks = [
       <div class="contact-card">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Ready to launch UnitechAccidentAssessor.co.ke</h2>
+          <h2>Talk to Unitech Accident Assessor</h2>
           <p>
-            This starter includes a clean homepage. We can next add your real phone number,
-            email, office location, service areas, and an enquiry form.
+            Reach out for vehicle valuations, accident assessments, pre-purchase checks, and
+            insurer-ready reports anywhere in Kenya.
           </p>
         </div>
 

@@ -2,24 +2,72 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 
 const factors = [
-  "Age of the vehicle",
-  "Mileage or odometer reading",
-  "Make, model, and brand popularity",
-  "Mechanical and structural condition",
-  "Service history and maintenance records",
-  "Body condition and appearance",
-  "Accident and repair history",
-  "Vehicle usage: private or commercial",
-  "Imported versus locally assembled status",
-  "Spare-parts availability and maintenance cost",
-  "Modifications and customisation quality",
-  "Current market demand and seasonality"
+  {
+    title: "1. Age of the vehicle",
+    text:
+      "Newer vehicles usually attract higher values, while older cars depreciate over time. In Kenya, the first year often carries the steepest drop, followed by annual depreciation that depends on condition and mileage."
+  },
+  {
+    title: "2. Mileage",
+    text:
+      "Low-mileage vehicles are generally seen as having less wear and tear. High mileage can signal upcoming service needs, mechanical wear, and reduced resale appeal."
+  },
+  {
+    title: "3. Make, model, and brand popularity",
+    text:
+      "Vehicles from brands known for reliability and easy maintenance often retain value better. Popular mainstream models usually hold stronger demand than niche or expensive-to-maintain brands."
+  },
+  {
+    title: "4. Mechanical and structural condition",
+    text:
+      "Engine performance, suspension, transmission, brakes, and the presence of rust or accident damage strongly influence the final figure. Serious faults reduce both market value and buyer confidence."
+  },
+  {
+    title: "5. Service history and maintenance records",
+    text:
+      "A documented maintenance history suggests responsible ownership and helps support a stronger valuation. It also shows whether key repairs and servicing were done consistently."
+  },
+  {
+    title: "6. Body condition and appearance",
+    text:
+      "Paint condition, dents, panel gaps, tyre condition, lights, and interior wear all affect perceived value, especially in the Kenyan second-hand market where presentation matters."
+  },
+  {
+    title: "7. Accident and repair history",
+    text:
+      "A vehicle that has suffered major accident damage or poor-quality repairs is usually valued lower. Structural damage, repainting, and hidden repair work can all affect the assessment."
+  },
+  {
+    title: "8. Vehicle usage",
+    text:
+      "Commercial vehicles such as taxis, matatus, and delivery vehicles often depreciate faster because of heavier usage, higher mileage, and tougher operating conditions."
+  },
+  {
+    title: "9. Imported vs locally assembled status",
+    text:
+      "Market perception still affects how imported and locally assembled vehicles are valued. In some segments, imported models are viewed as better equipped or more durable, which can affect pricing."
+  },
+  {
+    title: "10. Spare-parts availability and maintenance cost",
+    text:
+      "Models with affordable, widely available parts usually maintain better resale value. Where parts are scarce or expensive, buyers and insurers tend to price in that risk."
+  },
+  {
+    title: "11. Modifications and customisation",
+    text:
+      "Aftermarket changes can help or hurt value depending on quality, buyer preference, and insurance considerations. Non-standard or excessive modifications often reduce resale value."
+  },
+  {
+    title: "12. Market demand and seasonality",
+    text:
+      "Vehicle values shift with supply and demand. Fuel-efficient vehicles may perform better during high fuel prices, while SUVs and 4x4s can attract stronger demand in certain regions and seasons."
+  }
 ];
 ---
 
 <MainLayout
   title="Factors Affecting Car Valuation in Kenya | Unitech Accident Assessor"
-  description="Discover the key factors that affect a vehicle's market value in Kenya, from age and mileage to condition and demand."
+  description="Understand the main factors that influence car valuation in Kenya, including age, mileage, condition, accident history, and market demand."
   pageTitle="Factors Affecting Car Valuation in Kenya"
 >
   <main class="page-main">
@@ -27,46 +75,51 @@ const factors = [
       <div class="content-grid">
         <article class="article-card">
           <p class="article-lead">
-            A car’s value in Kenya is shaped by more than make and model. Condition, usage,
-            maintenance, accident history, and market demand all influence the final figure.
+            Whether you are buying, selling, insuring, or importing a vehicle, understanding what
+            shapes its market value helps you make better decisions. In Kenya, valuation is driven
+            by both the actual condition of the vehicle and the realities of the local market.
           </p>
 
-          <h2>Key valuation factors</h2>
-          <div class="factor-grid">
-            {factors.map((factor) => <div class="mini-card">{factor}</div>)}
+          <h2>What determines a vehicle's value?</h2>
+          <p>
+            A valuer does not look at the make and model alone. The final assessment reflects
+            physical condition, ownership history, maintenance standards, usage pattern, and the
+            current appetite for that type of vehicle in the Kenyan market.
+          </p>
+
+          <div class="article-steps">
+            {factors.map((factor) => (
+              <section class="step-card">
+                <h3>{factor.title}</h3>
+                <p>{factor.text}</p>
+              </section>
+            ))}
           </div>
 
-          <h2>What valuers look for most closely</h2>
+          <h2>What this means for buyers and owners</h2>
           <p>
-            The biggest drivers of value tend to be age, mileage, mechanical condition, and
-            whether there is evidence of accident damage or poor repairs. These can affect both
-            resale value and what an insurer is willing to recognize.
+            Two vehicles of the same model year can have very different values if one has accident
+            damage, weak service records, or heavy commercial use. The more evidence there is of
+            good care and clean history, the easier it is to justify a stronger value.
           </p>
 
-          <h2>Why market demand matters</h2>
+          <h2>Conclusion</h2>
           <p>
-            Popular brands with reliable spare-parts support, such as many Toyota, Subaru, and
-            Mazda models, often retain value better in Kenya. High fuel prices, rural demand for
-            SUVs, and broader economic conditions can also shift pricing.
-          </p>
-
-          <h2>Why documentation supports value</h2>
-          <p>
-            A strong service history, consistent ownership details, and clear repair records help a
-            valuer defend the figure given in the report. Missing or inconsistent records can lower
-            buyer and insurer confidence.
+            Car valuation in Kenya is influenced by mechanical, cosmetic, financial, and
+            market-related factors. Understanding them helps you avoid overpaying, underinsuring,
+            or settling for a weak price.
           </p>
         </article>
 
         <aside class="sidebar-card">
           <p class="eyebrow">Quick takeaway</p>
-          <h2>Condition and proof matter.</h2>
+          <h2>Condition, history, and demand drive value.</h2>
           <p>
-            Two vehicles of the same model year can have very different values depending on
-            maintenance, accident history, and usage.
+            Strong maintenance records and clean condition support better values, while heavy use,
+            poor repairs, and weak market demand usually pull the figure down.
           </p>
           <a class="button button--primary" href="/services/pre-purchase-vehicle-valuation/">
-            Book a pre-purchase check
+            Book a valuation
           </a>
         </aside>
       </div>
